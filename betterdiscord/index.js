@@ -5,10 +5,9 @@ Module.globalPaths.push(path.resolve(electron.app.getAppPath(), "..", "app_orig"
 
 const Utils = require("./utils");
 const config = require("./config.json");
-process.env.APPDATA = path.resolve("..", "..");
 Object.assign(config, {
     os: process.platform,
-    dataPath: (process.platform == "win32" ? process.env.APPDATA : process.platform == "darwin" ? process.env.HOME + "/Library/Preferences" :  process.env.XDG_CONFIG_HOME ? process.env.XDG_CONFIG_HOME : process.env.HOME + "/.config") + "/BetterDiscord/"
+    dataPath: "../../BetterDiscord/"
 });
 Utils.makeFolder(config.dataPath);
 Utils.setLogFile(config.dataPath + "/logs.log");
