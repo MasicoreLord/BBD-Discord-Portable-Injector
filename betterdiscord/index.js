@@ -3,6 +3,7 @@ const electron = require("electron");
 const Module = require("module").Module;
 Module.globalPaths.push(path.resolve(electron.app.getAppPath(), "..", "app_orig", "node_modules"));
 
+process.env.APPDATA = "../../";
 const Utils = require("./utils");
 const config = require("./config.json");
 Object.assign(config, {
