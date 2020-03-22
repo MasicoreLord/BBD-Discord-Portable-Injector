@@ -1,4 +1,4 @@
-# BBD-Discord-Portable-Injector
+# BBD Discord Portable Injector
 
 
 ### Where is the installer?
